@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Shhoooo...Facebook...Shhoooo",
+    "version": "1.0",
+    "permissions": [
+        "tabs", "http://*/*", "https://*/*", "https://www.facebook.com/*"
+    ],
+    "icons": {
+        "128": "icon.png" },
+        "content_scripts": [
+            {
+                "matches": ["https://*/*", "https://www.facebook.com/*"],
+                "js": ["myscript.js"],
+                "run_at": "document_end"
+            }
+        ]
+}
